@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0px ;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 22px;
+    /* align-items: center; */
+}
+
+form{
+    /* background-color: brown; */
+    width: 80%;
+    
+}
+
+fieldset{
+    background-color: rgb(167, 208, 219);
+    border-radius: 10px;
+    border: green solid ;
+}
+.creds{
+    display: flex;
+    margin-top: 10px;
+}
+.cred{
+    margin: 0 30px 0 0;
+}
+
+.cred input{
+    width: 200px;
+}
+
+.cred input .date{
+    width: 100px;
+}
+.required {
+    color: red;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+/* ------- */
+.cito{
+    margin-top: 40px;
+}
+
+.statut{
+    margin-right: 5px;
+}
+
+.submit{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+
+}
+.submit button{
+    font-size: 22px;
+    padding: 5px 20px;
+    margin: 10px;
+}
+.submit button:hover {
+    cursor: pointer;
+    background-color: rgb(218, 233, 228);
+}
+
+.footer{
+    margin-bottom: 100px;
+}

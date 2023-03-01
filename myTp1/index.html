@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <div>
+        <br>
+    </div>
+    <form action="">
+        <fieldset>
+            <legend style="color: #0b9f21; font-size: 22px;">Information de base</legend>
+            <div class="creds">
+                <div class="cred">
+                    <label for="nom">Nom<span class="required">&#42;</span></label><br>
+                    <input type="text" name="nom" required>
+                </div>
+                <div class="cred">
+                    <label for="Prenom">Prenom<span class="required">*</span></label><br>
+                    <input type="text" name="Prenom" required>
+                </div>
+                <div class="credr">
+                    <label for="sexe">sexe<span class="required">*</span></label><br>
+                    <input type="radio" name="sexe" value="F">F
+                    <input type="radio" name="sexe" value="H">H<br>
+                </div>
+            </div>
+            <div class="date"><br>
+                <label for="nom">Date de naissance (aaaa-mm-jj)<span class="required">&#42;</span></label><br>
+                <input type="text" name="nom" required>
+            </div>
+            <div class="cito">
+                <label for="sexe">citoyenn-ete<span class="required">*</span></label><br>
+                <input type="radio" name="sexe" value="F">canadienne <br>
+                <input type="radio" name="sexe" value="H" checked>Residence<br>
+                <input type="radio" name="sexe" value="H" checked>Autre<br>
+            </div>
+
+            <div><br><br>
+                <label for="lieu">Lieu de naissance:</label><br>
+                <textarea name="lieu" id="" cols="50" rows="1"></textarea>
+            </div>
+
+            <div class="cred"><br><br>
+                <label for="adress">Adress civique<span class="required">*</span></label><br>
+                <input type="text" name="adress" required>
+            </div>
+            <div class="creds">
+                <div class="cred">
+                    <br><br>
+                    <label for="adress">Ville<span class="required">*</span></label><br>
+                    <input type="text" name="adress" required>
+                </div>
+                <div class="cred"><br><br>
+                    <label for="">Province<span class="required">*</span></label><br>
+                    <select name="province" id="">
+                        <option value="1">choisir</option>
+                        <option value="2">choisir2</option>
+                        <option value="3">choisir3</option>
+                    </select>
+                </div>
+
+                <div class="cred">
+                    <br><br>
+                    <label for="code">code postal<span class="required">*</span></label><br>
+                    <input type="text" name="code" required>
+                </div>
+            </div>
+
+            <div class="cred">
+                <br><br>
+                <label for="code">Adresse courriel<span class="required">*</span></label><br>
+                <input type="text" name="code" required>
+            </div>
+            <div>
+                <label for="">Numeros de telephone</label>
+                <div class="creds">
+                    <div class="cred">
+                        <label for="">Domicile</label><br>
+                        <input type="text" name="" required>
+                    </div>
+                    <div class="cred">
+                        <label for="">cellulaire</label><br>
+                        <input type="text" name="" required>
+                    </div>
+                    <div class="cred">
+                        <label for="">Travail</label><br>
+                        <input type="text" name="" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="credr">
+                <br>
+                <label for="sexe">Numero de telephone prefere<span class="required">*</span></label><br>
+                <input type="radio" name="phontype" value="" checked>Domicile
+                <input type="radio" name="phontype" value="">cellulaire
+                <input type="radio" name="phontype" value="">Travail
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">statut professionnel<span class="required">&#42;</span></label>
+                <div class="creds">
+                    <div class="statut">
+                        <input id="wind" type="checkbox" name="statut" value="windows" checked>
+                        <label for="wind">Retraite</label>
+                    </div>
+                    <div class="statut">
+                        <input id="lin" type="checkbox" name="statut" value="linux">
+                        <label for="lin">Pre retraite</label>
+                    </div>
+                    <div class="statut">
+                        <input id="m" type="checkbox" name="statut" value="Mac">
+                        <label for="m">Je travaill actuellement a temps plein</label>
+                    </div>
+                    <div class="statut">
+                        <input id="m" type="checkbox" name="statut" value="Mac">
+                        <label for="m">Je travaill actuellement a temps partiel</label>
+                    </div>
+                    <div class="statut">
+                        <input id="m" type="checkbox" name="statut" value="Mac">
+                        <label for="m">Autre</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </fieldset>
+        <div class="submit">
+            <button >Envoyer</button>
+        </div>
+    </form>
+    <div class="footer">
+    </div>
+
+</body>
+
+</html>

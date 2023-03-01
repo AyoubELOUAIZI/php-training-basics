@@ -1,0 +1,98 @@
+.tab1 {
+    border: 9;
+    /* background-color: red; */
+
+}
+
+/* h1 {
+    color: purple;
+}
+
+p {
+    color: blue;
+} */
+.container {
+    text-align: center;
+    margin-top: 45px
+}
+
+.btn {
+    /* aljawanibe*/
+    border: 4px solid #3498db;
+    background: none;
+    /*from in side */
+    padding: 10px 20px;
+    font-family: "montserrat", "Helvetica Neue", Helvetica, Arial;
+    cursor: pointer;
+    /* maybe outside destence */
+    margin: 7px;
+    transition: 0.8s;
+    /* position: absolute; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* height: 0%; */
+    background: #3498db;
+}
+
+.btn1,
+.btn2 {
+    color: #3498db;
+
+}
+
+.btn3,
+.btn4 {
+    color: #fff;
+}
+
+.btn1:hover,
+.btn2:hover {
+    color: #fff;
+
+}
+
+.btn3:hover,
+.btn4:hover {
+    color: #3498db;
+
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 10%;
+
+}
+
+
+
+/* ------------------------------------ */
+#red {
+    background-color: red;
+}
+
+#Orange {
+    background-color: orange;
+}
+
+#Yellow {
+    background-color: yellow;
+}
+
+#Green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#Indigo {
+    background-color: indigo;
+}
+
+#violet {
+    background-color: violet;
+}
