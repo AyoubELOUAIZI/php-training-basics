@@ -37,20 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-  if (empty($_POST["website"])) {
-    $website = "the site is empty";
-  } else {
+  if (!empty($_POST["website"])) {
     $website = test_input($_POST["website"]);
-    
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
       $websiteErr = "Invalid URL";
     }
   }
 
-  if (empty($_POST["comment"])) {
-    $comment = "comment is empty";
-  } else {
+  if (!empty($_POST["comment"])) {
     $comment = test_input($_POST["comment"]);
   }
 
@@ -66,35 +61,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-
-
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-
         <span class="error">Name: * <?php echo $nameErr;?></span>
-        <input type="text" name="name">
+        <input type="text" name="name" value="<?php echo $name;?>">
         <br><br>
 
         <span class="error">E-mail: * <?php echo $emailErr;?></span>
-        <input type="text" name="email">
+        <input type="text" name="email" value="<?php echo $email;?>">
         <br><br>
 
         <span class="error">Website: <?php echo $websiteErr;?></span>
         <input type="text" name="website">
         <br><br>
-        Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+        Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
         <br><br>
 
         <span class="error"> Gender: * <?php echo $genderErr;?></span>
         <div class="radio">
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="other">Other
+            <input id="female" type="radio" name="gender" value="female" <?php if($gender=="female") echo "checked";?>>
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender" value="male" <?php if($gender=="male") echo "checked";?>>
+            <label for="male">Male</label>
+            <input id="other" type="radio" name="gender" value="other" <?php if($gender=="other") echo "checked";?>>
+            <label for="other">Other</label>
         </div>
         <br><br>
         <input type="submit" name="submit" value="Submit">
-
-
     </form>
 
 
@@ -111,8 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<br>";
         echo $gender;
     }
-
-
     
 function test_input($data) {
   $data = trim($data);
