@@ -22,10 +22,8 @@ fclose($myfile);
 <body>
 
 
-</body>
 
-</html>
-<?php
+    <?php
 // r	Open a file for read only.
 // w	Open a file for write only
 // a	Open a file for write only. 
@@ -36,3 +34,28 @@ fclose($myfile);
 // x+	Creates a new file for read/write.
 
 ?>
+    <hr>
+
+    <?php
+    echo "Read the file line by line<br><br>";
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+// Output one line until end-of-file
+while(!feof($myfile)) {
+    echo fgets($myfile) . "<br>";
+}
+fclose($myfile);
+?>
+    <hr>
+    <?php
+    echo"Read Caracter by caracter <br>";
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+// Output one character until end-of-file
+while(!feof($myfile)) {
+  echo fgetc($myfile);
+}
+fclose($myfile);
+?>
+
+</body>
+
+</html>
