@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+span{
+    color:red;
+}
+
+form .radio input{
+   display: inline-block;
+}
