@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.cvContainer {
+    border: 2px solid black;
+    max-width: 650px;
+    background-color: rgb(111, 195, 201);
+    margin: 20px 0;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 55%;
+    margin: 3px 20px;
+}
+
+.hh{
+text-align: center;
+}
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(194, 185, 185);
+}
+
+section {
+    background-color: rgb(228, 224, 219);
+    display: inline-block;
+    width: 100%;
+
+}
+
+section h2 {
+    margin: 0 20px;
+    color: rgb(39, 95, 95);
+}
+
+p {
+    margin: 0;
+}

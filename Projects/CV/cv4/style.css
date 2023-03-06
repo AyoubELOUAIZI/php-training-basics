@@ -1,0 +1,63 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Education styles */
+#education {
+    margin-top: 30px;
+}
+
+#education h2 {
+    margin-bottom: 10px;
+}
+
+/* Languages styles */
+#languages {
+    margin-top: 30px;
+}
+
+#languages h2 {
+    margin-bottom: 10px;
+}
+
+/* Experience styles */
+#experience {
+    margin-top: 30px;
+}
+
+#experience h2 {
+    margin-bottom: 10px;
+}
+
+/* Activities styles */
+#activities {
+    margin-top: 30px;
+}
+
+#activities h2 {
+    margin-bottom: 10px;
+}
+
+/* Projects styles */
+#projects {
+    margin-top: 30px;
+}
+
+#projects h2 {
+    margin-bottom: 10px;
+}

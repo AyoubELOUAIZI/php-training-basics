@@ -1,0 +1,39 @@
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: #eee;
+    padding: 50px;
+    text-align: center;
+}
+
+section {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 20px;
+}
