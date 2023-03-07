@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fclose($file);
 
     $_SESSION['message'] = 'Experience added successfully!';
-    header('Location: ' . $_SERVER['PHP_SELF']);
+    	header('Location: hobbies.php');
     exit;
 }
 
