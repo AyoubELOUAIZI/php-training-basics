@@ -17,6 +17,23 @@ $user=$_SESSION['login'];
 setcookie('visits', $visits, time() + 3600 * 24);
 ?>
 
+
+<?php
+
+
+$experiences = array();
+if (file_exists('experience.txt')) {
+    $file = fopen('experience.txt', 'r');
+    while (($json_data = fgets($file)) !== false) {
+        $experience = json_decode($json_data, true);
+        $experiences[] = $experience;
+    }
+    fclose($file);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +48,8 @@ setcookie('visits', $visits, time() + 3600 * 24);
 <body>
     <header>
         <div>
-            <p id="date">Date/hour: <?php echo date('d/m/Y H:i:s'); ?></p>
+            <p id="date">Date/hour: <?php echo date('d/m/Y H:i:s'); ?>
+            </p>
             <p id="date">Hi: <?php echo $user; ?></p>
         </div>
         <h2>My Resume</h2>
@@ -48,7 +66,23 @@ setcookie('visits', $visits, time() + 3600 * 24);
         </nav>
         <div class="cvcontainer">
             <div class="cv">
-                <h1>cv</h1>
+                <!-- <h1>cv</h1> -->
+                <!-- Experienes -->
+                <?php if (!empty($experiences)) { ?>
+                <h2>Experiences</h2>
+                <ul>
+                    <?php foreach ($experiences as $experience) { ?>
+                    <li>
+                        <strong><?php echo $experience['company_name']; ?></strong> -
+                        <?php echo $experience['position']; ?> -
+                        <?php echo $experience['start_date']; ?> to <?php echo $experience['end_date']; ?><br>
+                        <?php echo $experience['responsibilities']; ?>
+                    </li>
+                    <?php } ?>
+                </ul>
+                <?php } ?>
+
+                <!--  -->
             </div>
             <form method="post" action="connection.php">
                 <input type="hidden" name="logout_token" value="12345">

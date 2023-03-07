@@ -25,7 +25,7 @@ while (!feof($file)) {
         $last_name = trim(str_replace("Last Name:", "", $line));
     }
     
-    // extract last email
+    // extract last phone
     if (strpos($line, "Phone:") !== false) {
         $phone = trim(str_replace("Phone:", "", $line));
     }
@@ -145,6 +145,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" id="adress" name="adress" value="<?php echo $adress?>" required>
 
         <input type="submit" value="Next">
+    </form>
+    <form method="" action="myresume.php">
+        <input type="submit" value="<-just go to back">
     </form>
 
 </body>

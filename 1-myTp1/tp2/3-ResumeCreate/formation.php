@@ -91,6 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="" action="experience.php">
         <input type="submit" value="just go to Next ->">
     </form>
+    <form method="" action="etatcivil.php">
+        <input type="submit" value="<-just go to back">
+    </form>
 </body>
 
 </html>
