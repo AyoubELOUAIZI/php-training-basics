@@ -17,7 +17,7 @@ session_start();
         unset($_SESSION['message']);
     }
     ?>
-    <form method="post" action="formation_post.php">
+    <form method="post" action="">
         <h2>Education</h2>
         <label for="degree">Degree:</label>
         <input type="text" id="degree" name="degree"><br><br>

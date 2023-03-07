@@ -1,0 +1,2 @@
+{"company_name":"Irondev","position":"internship","start_date":"2023-03-02","end_date":"2023-03-08","responsibilities":"la creation d'un site web wordpress"}
+{"company_name":"lklk","position":"klklk","start_date":"","end_date":"","responsibilities":"Responsibilities..."}

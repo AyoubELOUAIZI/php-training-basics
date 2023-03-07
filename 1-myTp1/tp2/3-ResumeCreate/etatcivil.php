@@ -1,6 +1,51 @@
 <?php
 session_start();
 
+// initialize variables
+$first_name = "";
+$last_name = "";
+$phone = "";
+$email = "";
+$adress = "";
+
+   // read the data from etatcivil.txt file
+    $filename = "etatcivil.txt";
+    $file = fopen($filename, "r");
+    // read file line by line
+while (!feof($file)) {
+    $line = fgets($file);
+
+    // extract first name
+    if (strpos($line, "First Name:") !== false) {
+        $first_name = trim(str_replace("First Name:", "", $line));
+    }
+
+    // extract last name
+    if (strpos($line, "Last Name:") !== false) {
+        $last_name = trim(str_replace("Last Name:", "", $line));
+    }
+    
+    // extract last email
+    if (strpos($line, "Phone:") !== false) {
+        $phone = trim(str_replace("Phone:", "", $line));
+    }
+    // extract last email
+    if (strpos($line, "Email:") !== false) {
+        $email = trim(str_replace("Email:", "", $line));
+    }
+    // extract last email
+    if (strpos($line, "Adress:") !== false) {
+        $adress = trim(str_replace("Adress:", "", $line));
+    }
+
+   
+
+}
+
+fclose($file);
+
+
+
 // Check if form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	// Get form data and save to session
@@ -16,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$data .= "Email: " . $_SESSION['email'] . "\n";
 	$data .= "Phone: " . $_SESSION['phone'] . "\n";
 	$data .= "password: " . $_SESSION['password'] . "\n";
-	$data .= "adress: " . $_SESSION['adress'] . "\n";
+	$data .= "Adress: " . $_SESSION['adress'] . "\n";
 	file_put_contents('etatcivil.txt', $data);
 	
 	// Redirect to next page
@@ -85,19 +130,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST">
         <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required>
+        <input type="text" id="firstname" name="firstname" value="<?php echo $first_name?>" required>
 
         <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required>
+        <input type="text" id="lastname" name="lastname" value="<?php echo $last_name?>" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" value="<?php echo $email?>" required>
 
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" value="<?php echo $phone?>" required>
 
         <label for="adress">Adress:</label>
-        <input type="text" id="adress" name="adress" required>
+        <input type="text" id="adress" name="adress" value="<?php echo $adress?>" required>
 
         <input type="submit" value="Next">
     </form>
