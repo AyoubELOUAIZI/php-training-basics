@@ -54,12 +54,12 @@ nav ul li {
 form{
     width: 100%;
 }
-form input{
+.logout form input{
     padding: 10px;
     margin-left: 70%;
     border-radius: 10px;
 }
-form input:hover {
+.logout form input:hover {
     cursor: pointer;
     background-color: antiquewhite;
 
