@@ -75,6 +75,14 @@ if (file_exists('experience.txt')) {
             cols="50"><?php echo isset($_POST['responsibilities']) ? $_POST['responsibilities'] : 'Responsibilities...'; ?></textarea><br><br>
 
         <input type="submit" value="Submit">
+
+    </form>
+
+    <form method="" action="hobbies.php">
+        <input type="submit" value="just go to Next ->">
+    </form>
+    <form method="" action="formation.php">
+        <input type="submit" value="<-just go to back">
     </form>
 
     <?php if (!empty($experiences)) { ?>

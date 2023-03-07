@@ -88,6 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <input type="submit" value="Submit">
     </form>
+    <form method="" action="experience.php">
+        <input type="submit" value="just go to Next ->">
+    </form>
 </body>
 
 </html>

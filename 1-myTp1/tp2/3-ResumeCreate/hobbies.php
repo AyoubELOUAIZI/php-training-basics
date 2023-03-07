@@ -14,18 +14,18 @@ $hobby3 = "";
     $line = fgets($file);
 
     // extract first name
-    if (strpos($line, "Hobby1:") !== false) {
-        $first_name = trim(str_replace("Hobby1:", "", $line));
+    if (strpos($line, "Hobby1: ") !== false) {
+        $hobby1 = trim(str_replace("Hobby1:", "", $line));
     }
 
     // extract last name
     if (strpos($line, "Hobby2:") !== false) {
-        $last_name = trim(str_replace("Hobby2:", "", $line));
+        $hobby2 = trim(str_replace("Hobby2:", "", $line));
     }
     
     // extract last email
     if (strpos($line, "Hobby3:") !== false) {
-        $phone = trim(str_replace("Hobby3:", "", $line));
+        $hobby3 = trim(str_replace("Hobby3:", "", $line));
     }
 }
 
@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$_SESSION['hobby3'] = $_POST['hobby3'];
 	
 	// Save form data to text file
-	$data = "Hobby3: " . $_SESSION['firstname'] . "\n";
-	$data .= "Hobby3: " . $_SESSION['lastname'] . "\n";
-	$data .= "Hobby3: " . $_SESSION['email'] . "\n";
+	$data = "Hobby1: " . $_SESSION['hobby1'] . "\n";
+	$data .= "Hobby2: " . $_SESSION['hobby2'] . "\n";
+	$data .= "Hobby3: " . $_SESSION['hobby3'] . "\n";
 	file_put_contents('hobbies.txt', $data);
 	
 	// Redirect to next page
@@ -69,15 +69,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post" action="">
         <h2>Hobbies</h2>
         <label for="hobby1">Hobby 1:</label>
-        <input type="text" id="hobby1" name="hobby1"><br><br>
+        <input type="text" id="hobby1" name="hobby1" value="<?php echo $hobby1?>"><br><br>
 
         <label for="hobby2">Hobby 2:</label>
-        <input type="text" id="hobby2" name="hobby2"><br><br>
+        <input type="text" id="hobby2" name="hobby2" value="<?php echo $hobby2?>"><br><br>
 
         <label for="hobby3">Hobby 3:</label>
-        <input type="text" id="hobby3" name="hobby3"><br><br>
+        <input type="text" id="hobby3" name="hobby3" value="<?php echo $hobby3?>"><br><br>
 
         <input type="submit" value="Submit">
+    </form>
+    <form method="" action="myresume.php">
+        <input type="submit" value="just go to Next ->">
+    </form>
+    <form method="" action="experience.php">
+        <input type="submit" value="<-just go to back ">
     </form>
 </body>
 
