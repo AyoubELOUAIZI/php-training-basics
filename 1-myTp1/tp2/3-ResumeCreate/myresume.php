@@ -1,11 +1,6 @@
 <?php
  session_start();
 
-// if (!isset($_SESSION['civil_status']) || !isset($_SESSION['degree']) || !isset($_SESSION['company']) || !isset($_SESSION['hobbies'])) {
-//   header('Location: etatcivil.php');
-//   exit;
-// }
-
 if (isset($_COOKIE['visits'])) {
   $visits = $_COOKIE['visits'] + 1;
 } else {
@@ -19,18 +14,9 @@ $user=$_SESSION['login'];
     exit;
 }
 
-
 setcookie('visits', $visits, time() + 3600 * 24);
-
-// $civil_status = $_SESSION['civil_status'];
-// $first_name = $_SESSION['first_name'];
-// $last_name = $_SESSION['last_name'];
-// $degree = $_SESSION['degree'];
-// $school = $_SESSION['school'];
-// $company = $_SESSION['company'];
-// $position = $_SESSION['position'];
-// $hobbies = $_SESSION['hobbies'];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +24,7 @@ setcookie('visits', $visits, time() + 3600 * 24);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cv generater</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
